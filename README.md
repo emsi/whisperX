@@ -3,7 +3,7 @@ whisperX image that works
 
 # Description
 
-This is a trull working whisperX image made with proper cuda and cudnn versions and all the necessary libraries to run the whisperX code managed by uv.
+This is a just working whisperX image made with proper cuda and cudnn versions and all the necessary libraries to run the whisperX code managed by uv.
 
 # Requirements
 
@@ -11,13 +11,18 @@ NVIDIA Container Toolkit: https://docs.nvidia.com/datacenter/cloud-native/contai
 
 # Usage
 
-Use the helper script whisperX that cals the container or put it in yout ~/.local/bin folder to use it as a command line tool.
+Use the helper script whisperX that calls the container or put it in your ~/.local/bin folder to use it as a command line tool.
 
 ```bash
 whisperX --help
 ```
 
-Because the process loadss cuda libraries and many dependencies it might take a while to start.
+or use the docker command directly:
+```bash
+docker run --rm --runtime nvidia -i -v .:/whisperX emsi/whisperx 
+```
+
+Because the process loads cuda libraries and many dependencies it might take a while to start.
 
 
 # WhisperX Examples
