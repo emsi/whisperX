@@ -31,7 +31,7 @@ Because the process loads cuda libraries and many dependencies it might take a w
 
 ```bash
 # Basic lecture transcription with diarization
-whisperx lecture.mp4 \
+whisperX lecture.mp4 \
   --model large-v2 \
   --language en \
   --diarize \
@@ -39,7 +39,7 @@ whisperx lecture.mp4 \
   --output_format txt srt
 
 # With batch processing (faster on RTX 3090Ti)
-whisperx lecture.mp4 \
+whisperX lecture.mp4 \
   --model large-v2 \
   --language en \
   --diarize \
@@ -51,7 +51,7 @@ whisperx lecture.mp4 \
 
 ```bash
 # For a 3-hour movie with GPU memory management
-whisperx movie.mkv \
+whisperX movie.mkv \
   --model medium \  # Using medium to save memory
   --language en \
   --batch_size 8 \
@@ -64,7 +64,7 @@ whisperx movie.mkv \
 
 ```bash
 # Auto-detect language (for content with mixed languages)
-whisperx multilingual_interview.mp4 \
+whisperX multilingual_interview.mp4 \
   --model large-v2 \
   --output_format txt json vtt
 ```
@@ -74,7 +74,7 @@ whisperx multilingual_interview.mp4 \
 For your convenience here's the output of the `whisperX --help` command:
 
 ```bash
-usage: whisperx [-h] [--model MODEL] [--model_dir MODEL_DIR] [--device DEVICE]
+usage: whisperX [-h] [--model MODEL] [--model_dir MODEL_DIR] [--device DEVICE]
                 [--device_index DEVICE_INDEX] [--batch_size BATCH_SIZE]
                 [--compute_type {float16,float32,int8}]
                 [--output_dir OUTPUT_DIR]
