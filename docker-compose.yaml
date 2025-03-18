@@ -1,0 +1,11 @@
+services:
+  transcriber:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: emsi/whisperx
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=all
+  
