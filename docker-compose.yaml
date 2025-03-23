@@ -1,5 +1,5 @@
 services:
-  transcriber:
+  whisperx:
     build:
       context: .
       dockerfile: Dockerfile
@@ -8,4 +8,9 @@ services:
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
       - NVIDIA_DRIVER_CAPABILITIES=all
-  
+    volumes:
+      - cache:/root/.cache
+      - .:/whisperx
+
+volumes:
+  cache:
