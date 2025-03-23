@@ -19,7 +19,7 @@ whisperX --help
 
 or use the docker command directly:
 ```bash
-docker run --rm --runtime nvidia -i -v .:/whisperX emsi/whisperx --help
+docker compose --file "<path_to_this_project>/docker-compose.yaml" run -v "$(pwd)":/whisperX --rm whisperx --help
 ```
 
 Because the process loads cuda libraries and many dependencies it might take a while to start.
